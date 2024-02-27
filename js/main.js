@@ -13,7 +13,7 @@ function carritoDeCompras() {
     opcion = parseInt(prompt("Ingrese el número de la opción que desea comprar: \n1. Remera - $6000 \n2. Buzo - $12000 \n3. Campera - $25000 \n4. Pantalon - $18000 \n5. Zapatillas - $50000 \n0. Salir"));
 
     let cantidad = 0;
-    if (opcion !== 0) {
+    if ((opcion !== 0) && (!isNaN(cantidad))) {
       cantidad = parseInt(prompt("Ingrese la cantidad de prendas que desea comprar:"));
     }
 
