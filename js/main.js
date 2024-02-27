@@ -48,7 +48,7 @@ function carritoDeCompras() {
   } while (opcion !== 0);
 
   alert("El total gastado es de $" + totalGastado + ".");
-  alert("Gracias por elegirnos. Vuelva pronto");
+  alert("Gracias por elegirnos. Vuelva pronto.");
 }
 
 carritoDeCompras();
