@@ -1,32 +1,42 @@
 function carritoDeCompras() {
   let totalGastado = 0;
   let opcion;
+  const remera = 6000;
+  const buzo = 12000;
+  const campera = 25000;
+  const pantalon = 18000;
+  const zapatillas = 50000;
 
   alert("Bienvenido a tiendas del pacifico, en que podemos ayudarlo?");
 
   do {
     opcion = parseInt(prompt("Ingrese el número de la opción que desea comprar: \n1. Remera - $6000 \n2. Buzo - $12000 \n3. Campera - $25000 \n4. Pantalon - $18000 \n5. Zapatillas - $50000 \n0. Salir"));
 
+    let cantidad = 0;
+    if (opcion !== 0) {
+      cantidad = parseInt(prompt("Ingrese la cantidad de prendas que desea comprar:"));
+    }
+
     switch (opcion) {
       case 1:
-        totalGastado += 6000;
-        alert("Ha comprado una remera por $6000.");
+        totalGastado += remera*cantidad;
+        alert("Ha comprado " + cantidad + " remeras por $" + remera*cantidad);
         break;
       case 2:
-        totalGastado += 12000;
-        alert("Ha comprado un buzo por $12000.");
+        totalGastado += buzo*cantidad;
+        alert("Ha comprado " + cantidad + " buzos por $" + buzo*cantidad);
         break;
       case 3:
-        totalGastado += 25000;
-        alert("Ha comprado una campera por $25000.");
+        totalGastado += campera*cantidad;
+        alert("Ha comprado " + cantidad + " camperas por $" + campera*cantidad);
         break;
       case 4:
-        totalGastado += 18000;
-        alert("Ha comprado un pantalon por $18000.");
+        totalGastado += pantalon*cantidad;
+        alert("Ha comprado " + cantidad + " camperas por $" + pantalon*cantidad);
         break
       case 5:
-        totalGastado += 50000;
-        alert("Ha comprado unas zapatillas por $50000.");
+        totalGastado += zapatillas*cantidad;
+        alert("Ha comprado " + cantidad + " camperas por $" + zapatillas*cantidad);
         break
       case 0:
         alert("Saliendo...");
@@ -37,7 +47,7 @@ function carritoDeCompras() {
 
   } while (opcion !== 0);
 
-  alert("Ha gastado un total de $" + totalGastado + ".");
+  alert("El total gastado es de $" + totalGastado + ".");
   alert("Gracias por elegirnos. Vuelva pronto");
 }
 
