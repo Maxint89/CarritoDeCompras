@@ -7,14 +7,20 @@ function carritoDeCompras() {
   const pantalon = 18000;
   const zapatillas = 50000;
 
-  alert("Bienvenido a tiendas del pacifico, en que podemos ayudarlo?");
+  alert("Bienvenido a Indumentaria del pacifico, en que podemos ayudarlo?");
 
   do {
     opcion = parseInt(prompt("Ingrese el número de la opción que desea comprar: \n1. Remera - $6000 \n2. Buzo - $12000 \n3. Campera - $25000 \n4. Pantalon - $18000 \n5. Zapatillas - $50000 \n0. Salir"));
+    while (!isNaN(opcion) && (opcion >= 0) && (opcion !== null)){
+      alert("Por favor ingrese un valor numerico valido.");
+      opcion = parseInt(prompt("Ingrese el número de la opción que desea comprar: \n1. Remera - $6000 \n2. Buzo - $12000 \n3. Campera - $25000 \n4. Pantalon - $18000 \n5. Zapatillas - $50000 \n0. Salir"));
+    }
 
-    let cantidad = 0;
-    if ((opcion !== 0) && (!isNaN(cantidad))) {
+    let cantidad = 0 ;
+    if (opcion !== 0)  {
+      do {
       cantidad = parseInt(prompt("Ingrese la cantidad de prendas que desea comprar:"));
+    } while (isNaN(cantidad))
     }
 
     switch (opcion) {
