@@ -104,7 +104,8 @@ function gestionarCompra() {
         } else if (opcion === 0) {
             const continuarComprandoRespuesta = prompt("Ingrese 'salir' para terminar la compra o 'eliminar' para quitar un producto del carrito").toLowerCase();
             if (continuarComprandoRespuesta === "eliminar") {
-                const prendaAEliminar = prompt("Ingrese el nombre en singular del tipo de prenda que desea quitar del carrito:", mostrarCarrito()).toLowerCase();
+                mostrarCarrito()
+                const prendaAEliminar = prompt("Ingrese el nombre en singular del tipo de prenda que desea quitar del carrito:").toLowerCase();
                 eliminarPrenda(prendaAEliminar, totalGastado);
             } else if (continuarComprandoRespuesta === "salir") {
                 seguirComprando = false;
